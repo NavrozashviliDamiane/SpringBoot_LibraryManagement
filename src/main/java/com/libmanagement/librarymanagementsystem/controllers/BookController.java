@@ -35,6 +35,11 @@ public class BookController {
         this.getBookByIdService = getBookByIdService;
     }
 
+    @GetMapping("/")
+    public String welcome() {
+        return "Welcome to the Library Management System API.";
+    }
+
     @PostMapping("/create")
     public ResponseEntity<Book> createBook(@RequestBody Book book) {
         Book createdBook = bookCreateService.createBook(book);

@@ -35,7 +35,7 @@ public class BookController {
         this.getBookByIdService = getBookByIdService;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public String welcome() {
         return "Welcome to the Library Management System API.";
     }
